@@ -1,0 +1,131 @@
+body 
+{
+    color: black;
+    background: url(nyback.jpg) no-repeat 50% 50% fixed;
+    background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+-webkit-background-size: cover;
+}
+div.container
+{
+    width: 100%;
+}
+table, tr, th 
+{
+    padding: 20px;
+}
+a:link 
+{
+    color: blue;
+    background-color: transparent;
+}
+a:visited 
+{
+    color: purple;
+    background-color: transparent;
+}
+a:hover 
+{
+    color: lime;
+    background-color: transparent;
+}   
+a:active 
+{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#homehead
+{
+    font: bold 50px "Times New Roman", serif;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.5em;
+    clear: left;
+    margin : 0px;
+    background-image: url("Brooklyn Bridge.jpg");
+    background-size: 2000px 300px;
+    background-repeat: no-repeat;
+}
+#abouthead
+{
+    font: bold 50px "Times New Roman", serif;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    clear: left;
+    margin : 0px;
+    background-image: url("Brooklyn Bridge Park.jpg");
+    background-size: 2000px 300px;
+    background-repeat: no-repeat;
+}
+#contacthead
+{
+    font: bold 50px "Times New Roman", serif;
+    color: black;
+    text-align: center;
+    padding: 0.5em;
+    clear: left;
+    margin : 0px;
+    background-image: url("Times Square.jpg");
+    background-size: 2000px 300px;
+    background-repeat: no-repeat;
+}
+nav
+{
+    position: relative;
+    max-width: 20%;
+    float: left;
+    padding: 5sem;
+}
+article
+{
+    position: relative;
+    max-width: 80%;
+    overflow: hidden;
+    padding: 3em;
+}
+#home
+{
+    background: #FFFF00;
+    font-family: 'Crimson Text', serif;
+}
+#home:hover
+{
+    background: #00FF00;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+footer
+{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    clear: left;
+    color: black;
+    text-align: center;
+    align-self: bottom;
+}
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
