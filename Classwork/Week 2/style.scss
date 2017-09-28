@@ -1,0 +1,18 @@
+$HelloClass: yellow;
+
+.container 
+{
+  display: flex;
+  /*flex-direction: column;*/
+  flex-flow: column wrap;
+}
+.mynav
+{
+    color: blue;
+    flex: 1;
+}
+.song
+{
+	color: $HelloClass;
+	flex: 3;
+}

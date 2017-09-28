@@ -1,0 +1,181 @@
+$background-color: #FCFCF5;
+$text-color: #B91614;
+$baby-blue: #89cff0;
+$link: orange;
+$visited: white;
+$hover: green;
+$active: red;
+
+@mixin linx() 
+{
+  a {
+    color: $link;
+	}
+    a:visited 
+    {
+      color: $visit;
+    }
+    a:hover 
+    {
+      color: $hover;   
+    }
+    a:active 
+    {
+      color: $active;
+    }
+  }
+}
+* {
+	@include box-sizing($bs)
+	@include linx;
+}
+body {
+	background-color: $background-color;
+	
+	background: linear-gradient(180deg, #99e41d, #cc2424);
+	background-size: 400% 400%;
+
+	-webkit-animation: Fade 23s ease infinite;
+	-moz-animation: Fade 23s ease infinite;
+	-o-animation: Fade 23s ease infinite;
+	animation: Fade 23s ease infinite;
+
+	@-webkit-keyframes Fade {
+    	0%{background-position:50% 0%}
+    	50%{background-position:51% 100%}
+    	100%{background-position:50% 0%}
+	}
+	@-moz-keyframes Fade {
+    	0%{background-position:50% 0%}
+    	50%{background-position:51% 100%}
+    	100%{background-position:50% 0%}
+	}
+	@-o-keyframes Fade {
+    	0%{background-position:50% 0%}
+    	50%{background-position:51% 100%}
+    	100%{background-position:50% 0%}
+	}
+	@keyframes Fade { 
+    	0%{background-position:50% 0%}
+    	50%{background-position:51% 100%}
+    	100%{background-position:50% 0%}
+	}
+}
+.header, .footer {
+	flex: 0 0 100%;
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); 
+    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); 
+    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1));
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+#contentimg
+{
+    position: relative;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+  	transform-style: preserve-3d;
+  	transition: transform 1s;
+}
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+.main {
+	display: flex;
+	margin: 2;
+	flex-direction: column;
+}
+.nav {
+	flex: 1;
+	order: 1;
+	color: $text-color;
+	background-color: $baby-blue;
+	margin: 2;
+}
+.content {
+	position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+	flex: 7;
+	order: 2;
+	margin: 2;
+
+	position: relative;
+  	perspective: 800px;
+}
+.aside {
+	list-style: none;
+	flex: 2;
+	order: 3;
+	margin: 4;
+}
+
+#content img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+}
+
+#content::after {
+    content: '';
+    position: absolute;
+    z-index: -1; 
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; 
+    height: 100px;
+    bottom: 0;
+}
+h1, h2, h3, h4
+{
+	color: $text-color;
+	text-shadow: 2px 2px 5px red;
+}
+button {
+	background-color: $text-color;
+}
+#howitworks {
+	border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+	border-color: $text-color;
+}
+@media all and ( min-width: 480px ) 
+{
+	.main
+	{
+		flex-direction: row;
+	}
+}
+@media all and ( min-width: 720px )
+{
+	.main 
+	{
+		flex-direction: row;
+	}
+	.nav, .aside{
+    flex: 0 0 180px;
+  	}
+
+  	.content {
+    flex: 1;
+  }
+}
+@media all and ( min-width: 960px )
+{
+	.main
+	{
+		flex: 0 0 240px;
+	}
+}

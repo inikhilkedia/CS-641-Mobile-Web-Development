@@ -3,9 +3,9 @@ body
     color: black;
     background: url(nyback.jpg) no-repeat 50% 50% fixed;
     background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
--webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
 }
 div.container
 {
